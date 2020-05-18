@@ -1,6 +1,7 @@
 import React from 'react';
 import CurrentAttendees from './CurrentAttendees.jsx'
 import RegisterAttendee from './RegisterAttendee.jsx'
+import axios from "axios";
 
 
 class App extends React.Component {
@@ -26,7 +27,10 @@ class App extends React.Component {
   render() {
     return (
         <div className="main">
-          <CurrentAttendees />
+          <CurrentAttendees
+            attendees={this.state.attendees}
+            data={this.state.data}
+          />
           <RegisterAttendee />
         </div>
     )

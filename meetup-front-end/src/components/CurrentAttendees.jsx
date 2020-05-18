@@ -1,25 +1,51 @@
 // - A `Current Attendees` list, which should include first + last names of attendes, grouped by experience level (beginner, intermediate, expert)
 
-{/*  */}
-
 import React from 'react';
 
-class CurrentAttendees extends React.Component {
-render() {
+const CurrentAttendees = props => {
+  const expert = [];
+  const beginner = [];
+  const intermediate = [];
+
+  props.attendees.filter(a => {
+    if (a.skillLevel === "expert") {
+      expert.push(a);
+    } else if (a.skillLevel === "beginner") {
+      beginner.push(a);
+    } else {
+      intermediate.push(a);
+    }
+  });
+
   return (
-    <div class="attendees">
+    <div className="attendees">
       <h2>Attendees</h2>
-        <h3>Beginner</h3>
-          <div>Hoban Washburn</div>
-          <div>Jayne Cobb</div>
-        <h3>Intermediate</h3>
-          <div>Zoe Washburn</div>
-        <h3>Expert</h3>
-          <div>Malcom Reyolds</div>
-          <div>Kaylee Frye</div>
+      <h3>Beginner</h3>
+      {beginner.map(beginner => {
+        return (
+          <p>
+            {beginner.firstName} {beginner.lastName}
+          </p>
+        );
+      })}
+      <h3>Intermediate</h3>
+      {intermediate.map(intermediate => {
+        return (
+          <p>
+            {intermediate.firstName} {intermediate.lastName}
+          </p>
+        );
+      })}
+      <h3>Expert</h3>
+      {expert.map(expert => {
+        return (
+          <p>
+            {expert.firstName} {expert.lastName}
+          </p>
+        );
+      })}
     </div>
   )
-}
 }
 
 export default CurrentAttendees;
