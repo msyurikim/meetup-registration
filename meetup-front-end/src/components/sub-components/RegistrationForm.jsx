@@ -24,7 +24,7 @@ class RegistrationForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log(this.state);
-    //this.props.handleSubmit(this.state);
+    this.props.handleSubmit(this.state);
   }
 
   render() {
@@ -43,11 +43,11 @@ class RegistrationForm extends Component {
       >
         <h2>Register Attendee</h2>
         <label htmlFor="fname">First Name:</label>
-        <input name="firstName" id="firstName" onChange={this.handleOnChange} />
+        <input name="firstName" onChange={this.handleOnChange} />
         <label htmlFor="lname">Last Name:</label>
-        <input name="lastName" id="lastName" onChange={this.handleOnChange} />
+        <input name="lastName" onChange={this.handleOnChange} />
         <label htmlFor="email">Email Address:</label>
-        <input name="email" id="email" onChange={this.handleOnChange} />
+        <input name="email" onChange={this.handleOnChange} />
         <label htmlFor="shirt">Shirt Size:</label>
         <select name="shirt" onChange={this.handleOnChange}>
           <option value="XS">XS</option>
