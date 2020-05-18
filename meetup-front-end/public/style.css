@@ -36,6 +36,11 @@ h3 {
 
 .attendee-form label{
   margin-top: 40px;
+  width: 100%;
+  display: block;
+}
+.attendee-form select{
+  margin-top: 40px;
 }
 
 .attendees {
@@ -45,9 +50,26 @@ h3 {
   flex-flow: column nowrap;
 }
 
+select {
+  width:35%;
+  display: block;
+  padding:10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-sizing:border-box;
+  background:none;
+  outline:none;
+  resize:none;
+  border:0;
+  font-family:'Montserrat',sans-serif;
+  transition:all .3s;
+  border-bottom:2px solid #5C8BA5;
+}
+
 input {
   width:100%;
   padding:10px;
+  margin-bottom: 20px;
   box-sizing:border-box;
   background:none;
   outline:none;
