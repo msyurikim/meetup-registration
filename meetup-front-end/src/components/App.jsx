@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 
 import Attendees from './Attendees.jsx';
+import Registration from './Registration.jsx';
+
 
 
 class App extends React.Component {
@@ -29,6 +31,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="main">
+        <Registration />
         <Attendees attendees={this.state.attendees} />
       </div>
     );
