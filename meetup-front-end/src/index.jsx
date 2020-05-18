@@ -10,8 +10,11 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:3000/attendees", requestOptions)
+fetch("/attendees", requestOptions)
   .then((response) => {
-    ReactDOM.render(<App attendees={response}/>, document.getElementById('app'));
+    return response.json();
+  })
+  .then((body) => {
+    ReactDOM.render(<App attendees={body}/>, document.getElementById('app'));
   })
   .catch(error => console.log('error', error));
