@@ -27,7 +27,6 @@ class App extends React.Component {
   }
 
   postAttendee(attendee) {
-    console.log('clicked');
     axios.post('/attendees', attendee)
     .then((res) => {
       var newAttendees = this.state.attendees.slice();
