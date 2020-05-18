@@ -1,5 +1,7 @@
 import React from 'react';
 
+import axios from 'axios';
+
 class AttendeeForm extends React.Component {
   constructor(props) {
     super(props);
@@ -8,8 +10,8 @@ class AttendeeForm extends React.Component {
       firstName: '',
       lastName: '',
       email: '',
-      shirtSize: '',
-      experience: '',
+      shirtSize: 'XS',
+      experience: 'beginner',
     }
 
     this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
@@ -52,6 +54,24 @@ class AttendeeForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
+    let submission = this.state;
+    axios.post('/attendees', submission)
+      .then((response) => {
+        console.log(response);
+        this.props.refresh();
+      })
+      .then(() => {
+        this.setState({
+          firstName: '',
+          lastName: '',
+          email: '',
+          shirtSize: 'XS',
+          experience: 'beginner',
+        })
+      })
+      .catch((err) => {
+        console.log(err);
+      })
   }
 
   render() {
@@ -81,6 +101,7 @@ class AttendeeForm extends React.Component {
               <option value="L">L</option>
               <option value="XL">XL</option>
             </select>
+            <br />
           </label>
           <label>
             Experience Level:
@@ -91,7 +112,7 @@ class AttendeeForm extends React.Component {
               <option value="expert">expert</option>
             </select>
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Register" />
         </form>
       </div>
     );
