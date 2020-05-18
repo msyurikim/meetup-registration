@@ -2,7 +2,20 @@ import React from 'react';
 
 
 class App extends React.Component {
-// YOUR CODE HERE
+  constructor(props) {
+    super(props);
+    this.state = {
+      list : [{first: John, last: Smith, level: beginner}]
+    }
+  }
+
+
+  render () {
+    return (
+
+
+    )
+  }
 
 }
 
