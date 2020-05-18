@@ -10,7 +10,7 @@ class Form extends Component {
         lastName: '',
         email: '',
         shirt: '',
-        experience: '',
+        skillLevel: '',
       }
     }
     this.handleChange = this.handleChange.bind(this);
@@ -25,7 +25,7 @@ class Form extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log('what is this', this.state.form)
+    this.props.handlePost(this.state.form)
   }
   render() {
     return (
@@ -71,8 +71,8 @@ class Form extends Component {
           <label>
             Experience:
             <select
-              value={this.state.form.experience}
-              onChange={this.handleChange.bind(this, 'experience')}>
+              value={this.state.form.skillLevel}
+              onChange={this.handleChange.bind(this, 'skillLevel')}>
               <option value="Beginner">Beginner</option>
               <option value="Intermediate">Intermediate</option>
               <option value="Expert">Expert</option>
