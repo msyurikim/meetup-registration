@@ -2,9 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import AddAttendeeForm from './AddAttendeeForm.jsx';
-import Beginners from './Beginners.jsx';
-import Intermediate from './Intermediate.jsx';
-import Expert from './Expert.jsx';
+import AttendeeList from './AttendeeList.jsx';
 
 
 class App extends React.Component {
@@ -15,7 +13,7 @@ class App extends React.Component {
         all: [],
         beginner: [],
         intermediate: [],
-        experienced: [],
+        expert: [],
       },
     };
 
@@ -35,12 +33,14 @@ class App extends React.Component {
           : expert.push(attendee);
         });
 
-        this.setState({
-          attendees: {
-            all,
-            beginner,
-            intermediate,
-            expert,
+        this.setState((state) => {
+          return {
+            attendees: {
+              all,
+              beginner,
+              intermediate,
+              expert,
+            }
           }
         });
       })
@@ -51,20 +51,32 @@ class App extends React.Component {
       });
   }
 
+  addAttendee() {
+    axios.post('/attendees')
+  }
+
   componentDidMount() {
     this.getAttendees();
   }
 
 
   render() {
+    const {
+      attendees: {beginner} = [],
+      attendees: {intermediate} = [],
+      attendees: {expert} = [],
+    } = this.state;
+    console.log('Beginner: ', beginner);
+    console.log('Intermediate: ', intermediate);
+    console.log('Expert: ', expert);
     return (
       <div className="main">
         <AddAttendeeForm />
         <div className="attendees">
           <h2>Attendees</h2>
-          <Beginners />
-          <Intermediate />
-          <Expert />
+          <AttendeeList attendees={beginner} experience='Beginner' />
+          <AttendeeList attendees={intermediate} experience='Intermediate' />
+          <AttendeeList attendees={expert} experience='Expert' />
         </div>
       </div>
     );
