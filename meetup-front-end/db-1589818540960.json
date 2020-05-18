@@ -39,22 +39,6 @@
       "email": "kaylee@serenity.com",
       "shirt": "S",
       "skillLevel": "expert"
-    },
-    {
-      "firstName": "k",
-      "lastName": "k",
-      "email": "k",
-      "shirt": "k",
-      "skillLevel": "k",
-      "id": 6
-    },
-    {
-      "firstName": "hi",
-      "lastName": "hi",
-      "email": "hi",
-      "shirt": "hi",
-      "skillLevel": "hi",
-      "id": 7
     }
   ]
 }
