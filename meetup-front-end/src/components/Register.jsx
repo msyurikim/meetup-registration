@@ -9,8 +9,10 @@ class Register extends React.Component {
     }
 
   }
+//*when ever the information of the form is submitted we will send that information with a post request to save it in our database
 
-  
+//here: axios post request inside handleCLick function
+
   render (){
     return (
 
