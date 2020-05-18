@@ -41,7 +41,6 @@ class App extends React.Component {
         console.log('ERROR');
         console.log(error);
     });
-
   }
 
   // REGISTER NEW ATTENDEE
@@ -60,7 +59,7 @@ class App extends React.Component {
       skillLevel: event.target.skillLevel.value,
     };
 
-    console.log(insert);
+    //console.log(insert);
 
     axios.post('http://localhost:3000/attendees', insert)
     .then((response) => {
@@ -73,8 +72,6 @@ class App extends React.Component {
         console.log('ERROR');
         console.log(error);
     });
-
-
   }
 
   render () {
@@ -87,8 +84,6 @@ class App extends React.Component {
         <div className="attendees">
           <Attendees currentAttendees={this.state.currentAttendees} />
         </div>
-
-
       </div>
     );
   }
