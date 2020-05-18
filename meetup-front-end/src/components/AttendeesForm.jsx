@@ -54,8 +54,8 @@ class AttendeesForm extends React.Component {
     });
   }
 
-  handleSubmit (e) {
-    console.log(e.target);
+  handleSubmit () {
+    this.props.handleAdd(this.state);
   }
 
   render () {

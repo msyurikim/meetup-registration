@@ -11,6 +11,7 @@ class App extends React.Component {
     this.state = {
       attendees: []
     };
+    this.addAttendees = this.addAttendees.bind(this);
   }
 
   componentDidMount() {
@@ -29,10 +30,14 @@ class App extends React.Component {
       })
   }
 
+  addAttendees(attendee) {
+    console.log(attendee);
+  }
+
   render () {
     return (
       <div className="main">
-        <AttendeesForm />
+        <AttendeesForm handleAdd={this.addAttendees} />
         <AttendeesList attendees={this.state.attendees} />
       </div>
     );
