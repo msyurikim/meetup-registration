@@ -31,7 +31,13 @@ class App extends React.Component {
   }
 
   addAttendees(attendee) {
-    console.log(attendee);
+    axios.post('/attendees', attendee)
+      .then(response => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.error(err);
+      })
   }
 
   render () {
