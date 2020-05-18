@@ -10,16 +10,27 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-
+      attendees: [],
     }
+  }
+
+  componentDidMount() {
+    axios.get('/attendees')
+      .then((data) => {this.updateAttendees(data.data)});
+  }
+
+  updateAttendees(data) {
+    this.setState({
+      attendees: data,
+    })
   }
 
 render() {
   return(
     <div className="main">
-    <AttendeeForm />
-    <Attendees />
-  </div>
+      <AttendeeForm />
+      <Attendees />
+    </div>
   )
 }
 
