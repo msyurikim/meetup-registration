@@ -1,4 +1,7 @@
 import React from 'react';
+import axios from 'axios';
+
+import Attendees from './Attendees.jsx';
 
 
 class App extends React.Component {
