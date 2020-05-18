@@ -1,8 +1,18 @@
 import React from 'react';
+import List from './List.jsx';
+import Form from './Form.jsx';
 
 
 class App extends React.Component {
-// YOUR CODE HERE
+  render() {
+
+    return (
+    <div className='main'>
+      <Form />
+      <List />
+    </div>
+    )
+  }
 
 }
 
