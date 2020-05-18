@@ -79,9 +79,16 @@ class App extends React.Component {
 
   render () {
     return (
-      <div>
-      <Register register={this.register.bind(this)} />
-      <Attendees currentAttendees={this.state.currentAttendees} />
+      <div className="main">
+        <div className="attendee-form">
+          <Register register={this.register.bind(this)} />
+        </div>
+
+        <div className="attendees">
+          <Attendees currentAttendees={this.state.currentAttendees} />
+        </div>
+
+
       </div>
     );
   }

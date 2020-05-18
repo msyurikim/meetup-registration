@@ -26,7 +26,7 @@ var Register = (props) => (
           <option value="expert">Expert</option>
         </select>
 
-        <input type="submit" value="Register" />
+        <button type="submit">Register</button>
     </form>
   </div>
 
