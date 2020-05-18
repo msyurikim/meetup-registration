@@ -56,6 +56,7 @@ input {
   font-family:'Montserrat',sans-serif;
   transition:all .3s;
   border-bottom:2px solid #5C8BA5;
+  margin-bottom: 10px;
 }
 
 input:focus {
@@ -76,3 +77,8 @@ button:hover {
   background:#2a79a7;
   border: 2px solid #2a79a7;
 }
+
+select {
+  margin: 0px 15px 15px 5px;
+}
+
