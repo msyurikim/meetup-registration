@@ -11,7 +11,13 @@ class FormInput extends React.Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    console.log(this.state);
+    this.props.postAttendee({
+      firstName: this.state.first,
+      lastName: this.state.last,
+      email: this.state.email,
+      shirt: this.state.size,
+      skillLevel: this.state.experience,
+    });
   };
 
   handleChange (e) {
