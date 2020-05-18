@@ -33,7 +33,7 @@ class App extends React.Component {
     return (
       <div>
         <AttendeesForm />
-        <AttendeesList />
+        <AttendeesList attendees={attendees} />
       </div>
     );
   }
