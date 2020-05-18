@@ -39,6 +39,14 @@
       "email": "kaylee@serenity.com",
       "shirt": "S",
       "skillLevel": "expert"
+    },
+    {
+      "firstName": "Stephen",
+      "lastName": "Giardina",
+      "email": "stephengiar@gmail.com",
+      "shirt": "L",
+      "skillLevel": "expert",
+      "id": 6
     }
   ]
 }
