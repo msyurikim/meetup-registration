@@ -15,6 +15,7 @@ class App extends React.Component {
         intermediate: [],
         expert: [],
       },
+
     };
 
     this.getAttendees = this.getAttendees.bind(this);
@@ -53,6 +54,15 @@ class App extends React.Component {
 
   addAttendee() {
     axios.post('/attendees')
+  }
+
+  handleChange(e) {
+    // Update field values in state
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+    this.addAttendee();
   }
 
   componentDidMount() {
