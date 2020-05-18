@@ -3,7 +3,7 @@ import React from 'react';
 
 function Attendees(props) {
   return (
-    <div class="attendees">
+    <div className="attendees">
     <h2>Attendees</h2>
     <h3>Beginner</h3>
     <div>Hoban Washburn</div>
