@@ -1,5 +1,6 @@
 import React from 'react';
 import AttendeeList from './AttendeeList.jsx';
+import AttendeeForm from './AttendeeForm.jsx';
 
 import axios from 'axios';
 
@@ -34,7 +35,10 @@ class App extends React.Component {
   render() {
     const { attendees } = this.state;
     return(
-      <AttendeeList attendees={attendees} />
+      <div className="main">
+        <AttendeeList attendees={attendees} />
+        <AttendeeForm />
+      </div>
     );
   }
 
