@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import List from './List.jsx';
+import Register from './Register.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -29,17 +30,7 @@ class App extends React.Component {
     return(
 
       <div class="main">
-      <div class="attendee-form">
-
-        <h2>Register Attendee</h2>
-        <label>First Name:
-          <input type="text"></input>
-        </label>
-        <label>Last Name:
-          <input type="text"></input>
-        </label>
-        <button>REGISTER</button>
-      </div>
+      <Register />
       <List list={this.state.list}/>
     </div>
 
