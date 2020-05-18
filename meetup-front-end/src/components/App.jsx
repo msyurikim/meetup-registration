@@ -1,6 +1,7 @@
 import React from 'react';
 import RegisterForm from './RegisterForm.jsx';
 import AttendeeList from './AttendeeList.jsx';
+import AttListEntry from './AttListEntry.jsx';
 import axios from 'axios';
 
 
@@ -11,7 +12,6 @@ constructor(props) {
         beginner: [],
         intermediate: [],
         expert: [],
-        all: [],
     }
 }
 
@@ -49,7 +49,11 @@ render () {
     return (
         <div className="main">
             <RegisterForm />
-            <AttendeeList />
+            <AttendeeList 
+            beginners={this.state.beginner} 
+            inters={this.state.intermediate}
+            experts={this.state.expert}
+            />
         </div>
     )
 }
