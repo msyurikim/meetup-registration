@@ -76,9 +76,6 @@ class App extends React.Component {
       attendees: {intermediate} = [],
       attendees: {expert} = [],
     } = this.state;
-    console.log('Beginner: ', beginner);
-    console.log('Intermediate: ', intermediate);
-    console.log('Expert: ', expert);
     return (
       <div className="main">
         <AddAttendeeForm />
