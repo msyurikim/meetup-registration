@@ -6,11 +6,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       attendees: [],
+      beginner: [],
+      intermediate: [],
+      advanced: [],
       firstName: '',
       lastName: '',
       email: '',
       shirtSize: '', // XS, S, M, L, XL, XXL
-      experienceLevel: '' // beginner, intermediate, expert
+      skillLevel: '' // beginner, intermediate, expert
     }
     this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -19,7 +22,11 @@ class App extends React.Component {
       .then(response => response.json())
       .then(data => (
         this.setState({attendees: data})
-  ))}
+      ))
+      .then(attendees.forEach((person) => (
+        this.setState({ person[skillLevel]: {'firstName': person.firstName, 'lastName': person.lastName})
+      )))
+  }
 
   handleInputChange(event) {
     const target = event.target;
@@ -34,7 +41,12 @@ class App extends React.Component {
   render(){
     return (
       <div style={{ width: '50%' }}>
-        <h2>New Attendee</h2>
+        <h2>Attendees</h2>
+        <h4>Advanced</h4>
+        attendees.map((obj) =>
+        <h4>Intermediate</h4>
+        <h4>Beginner</h4>
+        <h3>New Attendee</h3>
         <form>
           <label>
             First name:
@@ -84,13 +96,13 @@ class App extends React.Component {
             Experience Level:
               <select
               type="text"
-              name="experienceLevel"
+              name="skillLevel"
               value={this.state.value}
               onChange={this.handleInputChange}>
                 <option selected value="" disabled>I am ...</option>
                 <option value="beginner">beginner</option>
                 <option value="intermediate">intermediate</option>
-                <option value="advanced">advanced</option>
+                <option value="expert">advanced</option>
               </select>
           </label>
         </form>
