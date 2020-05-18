@@ -18,13 +18,14 @@ class List extends React.Component {
     axios.get('/attendees')
     .then((result) => {
       this.setState({
-        attendees: result
+        attendees: result.data
       });
     }).then(() => console.log(this.state));
   }
 
   render() {
-
+    // I would take in the attendees as props and then divide them up into the proper section
+    // I would possibly make seperate components for this. 
     return (
       <div className="attendees">
         <h2>Attendees</h2>

@@ -22,6 +22,10 @@ class Form extends React.Component {
 
   }
 
+  // I would build out a post request that take in my form when hitting submit
+  // It would also then need to call a get request to get the users after the user is done posting
+  
+
   handleFirst(value) {
     this.setState({
       first: value,
