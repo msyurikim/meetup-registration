@@ -29,7 +29,7 @@ class App extends React.Component {
 render() {
   return(
     <div className="main">
-      <AttendeeForm />
+      <AttendeeForm updateList={this.updateAttendees.bind(this)}/>
       <Attendees attendees={this.state.attendees}/>
     </div>
   )

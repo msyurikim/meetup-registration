@@ -7,7 +7,7 @@ const Attendees = (props) => {
 
   const sortAttendees = (attendees) => {
     for (let attendee of attendees) {
-      if (attendee.skillLevel === 'beginner') {
+      if (attendee.skillLevel === 'beginner' || attendee.skillLevel === undefined) {
         beginner.push(attendee);
       } else if (attendee.skillLevel === 'intermediate') {
         intermediate.push(attendee);
