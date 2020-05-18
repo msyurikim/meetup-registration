@@ -19,6 +19,7 @@ class Register extends React.Component {
       <div class="attendee-form">
 
         <h2>Register Attendee</h2>
+        {//add to the form  email address, shirt size and experience level fields}
           <form>
             <label>First Name:
                <input type="text"></input>
