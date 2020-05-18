@@ -31,9 +31,9 @@ class App extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="main">
         <AttendeesForm />
-        <AttendeesList attendees={attendees} />
+        <AttendeesList attendees={this.state.attendees} />
       </div>
     );
   }
