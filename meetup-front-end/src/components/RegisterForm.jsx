@@ -3,6 +3,7 @@ import React from 'react';
 function RegisterForm() {
     return (
         <div className="attendee-form">
+            <h2>Register Attendees</h2>
             <label>First Name: 
                 <input type="text"></input>
             </label>
