@@ -39,6 +39,22 @@
       "email": "kaylee@serenity.com",
       "shirt": "S",
       "skillLevel": "expert"
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Albert",
+      "email": "malbert3@my.heartland.edu",
+      "shirt": "",
+      "skillLevel": "",
+      "id": 6
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Albert",
+      "email": "michael.t.albert89@gmail.com",
+      "shirt": "XS",
+      "skillLevel": "beginner",
+      "id": 7
     }
   ]
 }
