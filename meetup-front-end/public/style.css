@@ -29,7 +29,7 @@ h3 {
 
 .attendee-form {
   display: flex;
-  width: 70%;
+  width: 70vw;
   margin: 20px;
   flex-flow: column nowrap;
 }
@@ -43,6 +43,9 @@ h3 {
   width: 30%;
   margin: 20px;
   flex-flow: column nowrap;
+}
+.dropdown {
+  margin-left: 5px;
 }
 
 input {
