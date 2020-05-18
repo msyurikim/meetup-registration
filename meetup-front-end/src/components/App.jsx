@@ -39,6 +39,54 @@ class App extends React.Component {
               onChange={this.handleInputChange}
             />
           </label>
+          <label>
+            Last name:
+            <input
+              type="text"
+              name="lastName"
+              value={this.state.value}
+              onChange={this.handleInputChange}
+            />
+          </label>
+          <label>
+            email:
+            <input
+              type="text"
+              name="email"
+              value={this.state.value}
+              onChange={this.handleInputChange}
+            />
+          </label>
+          <label>
+            Shirt Size:
+              <select
+              style={{ width: '100%' }}
+              type="text"
+              name="shirtSize"
+              value={this.state.value}
+              onChange={this.handleInputChange}>
+                <option selected value="" disabled>Pick a size</option>
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+          </label>
+          <label>
+            Experience Level:
+              <select
+              type="text"
+              name="experienceLevel"
+              value={this.state.value}
+              onChange={this.handleInputChange}>
+                <option selected value="" disabled>I am ...</option>
+                <option value="beginner">beginner</option>
+                <option value="intermediate">intermediate</option>
+                <option value="advanced">advanced</option>
+              </select>
+          </label>
         </form>
       </div>
     )
