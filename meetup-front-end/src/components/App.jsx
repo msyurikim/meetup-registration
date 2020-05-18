@@ -1,4 +1,5 @@
 import React from 'react';
+import Form from './Form.jsx'
 
 
 class App extends React.Component {
@@ -6,11 +7,18 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      attendees: [],
+    }
 
   }
   render () {
     return (
-      <div> hellow </div>
+      <div>
+        <div>
+          <Form />
+        </div>
+      </div>
     )
   }
 }
