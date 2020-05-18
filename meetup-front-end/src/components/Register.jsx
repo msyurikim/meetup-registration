@@ -10,20 +10,24 @@ class Register extends React.Component {
 
   }
 
+  
   render (){
     return (
 
       <div class="attendee-form">
 
         <h2>Register Attendee</h2>
-        <form></form>
-        <label>First Name:
-          <input type="text"></input>
-        </label>
-        <label>Last Name:
-          <input type="text"></input>
-        </label>
-        <button>REGISTER</button>
+          <form>
+            <label>First Name:
+               <input type="text"></input>
+            </label>
+
+            <label>Last Name:
+              <input type="text"></input>
+            </label>
+          </form>
+
+        <button onClick={this.handleClick}>REGISTER</button>
       </div>
 
     )
