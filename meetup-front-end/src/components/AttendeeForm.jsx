@@ -40,7 +40,7 @@ class AttendeeForm extends React.Component {
             <option value="expert">Expert</option>
           </select>
         </label>
-        <button>REGISTER</button>
+        <button onClick={this.props.onRegister}>REGISTER</button>
       </div>
     );
   }

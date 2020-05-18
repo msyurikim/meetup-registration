@@ -22,6 +22,7 @@ class App extends React.Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleShirtSizeChange = this.handleShirtSizeChange.bind(this);
     this.handleSkillLevelChange = this.handleSkillLevelChange.bind(this);
+    this.handleRegister = this.handleRegister.bind(this);
   }
 
   componentDidMount() {
@@ -70,6 +71,23 @@ class App extends React.Component {
     });
   }
 
+  handleRegister() {
+    $.ajax({
+      url: 'attendees',
+      type: 'POST',
+      data: {
+        "firstName": this.state.firstName,
+        "lastName": this.state.lastName,
+        "email": this.state.email,
+        "shirt": this.state.shirt,
+        "skillLevel": this.state.skillLevel
+      },
+      success: () => {
+        this.getAttendees();
+      }
+    })
+  }
+
   render() {
     return (
       <div className="main">
@@ -82,6 +100,7 @@ class App extends React.Component {
         email={this.state.email}
         onShirtSizeChange={this.handleShirtSizeChange}
         onSkillLevelChange={this.handleSkillLevelChange}
+        onRegister={this.handleRegister}
         />
         <Attendees attendees={this.state.attendees}/>
       </div>
