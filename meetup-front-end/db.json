@@ -39,6 +39,54 @@
       "email": "kaylee@serenity.com",
       "shirt": "S",
       "skillLevel": "expert"
+    },
+    {
+      "lastName": "Barr",
+      "firstName": "Jay",
+      "email": "jay@gmail.com",
+      "shirt": "L",
+      "skillLevel": "beginner",
+      "id": 6
+    },
+    {
+      "lastName": "Barr",
+      "firstName": "Jay",
+      "email": "jayrbarr@gmail.com",
+      "shirt": "L",
+      "skillLevel": "",
+      "id": 7
+    },
+    {
+      "lastName": "Barr",
+      "firstName": "Jay",
+      "email": "jayrbarr@gmail.com",
+      "shirt": "XXL",
+      "skillLevel": "",
+      "id": 8
+    },
+    {
+      "lastName": "Barr",
+      "firstName": "Marci",
+      "email": "jayrbarr@gmail.com",
+      "shirt": "XXL",
+      "skillLevel": "expert",
+      "id": 9
+    },
+    {
+      "lastName": "Barr",
+      "firstName": "Ellen",
+      "email": "ebb712@gmail.com",
+      "shirt": "M",
+      "skillLevel": "",
+      "id": 10
+    },
+    {
+      "lastName": "Barr",
+      "firstName": "Ellen",
+      "email": "ebb712@gmail.com",
+      "shirt": "M",
+      "skillLevel": "intermediate",
+      "id": 11
     }
   ]
 }
