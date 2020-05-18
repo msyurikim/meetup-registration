@@ -39,6 +39,61 @@
       "email": "kaylee@serenity.com",
       "shirt": "S",
       "skillLevel": "expert"
+    },
+    {
+      "firstName": "carlitos",
+      "lastName": "willis",
+      "id": 6
+    },
+    {
+      "firstName": "carlitos",
+      "lastName": "willis",
+      "email": "fake@email.com",
+      "shirt": "S",
+      "skillLevel": "expert",
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "firstName": "Carlitos",
+      "lastName": "Willis",
+      "email": "carlitoswillis@berkeley.edu",
+      "shirt": "M",
+      "skillLevel": "expert",
+      "id": 10
+    },
+    {
+      "shirt": "M",
+      "skillLevel": "beginner",
+      "firstName": "Carlitos",
+      "lastName": "Willis",
+      "email": "carlitoswillis@berkeley.edu",
+      "id": 11
+    },
+    {
+      "firstName": "Carlitos",
+      "lastName": "Willis",
+      "email": "carlitoswillis@berkeley.edu",
+      "id": 12
+    },
+    {
+      "shirt": "XXL",
+      "skillLevel": "intermediate",
+      "firstName": "Carlitos",
+      "lastName": "Willis",
+      "email": "carlitoswillis@berkeley.edu",
+      "id": 13
+    },
+    {
+      "firstName": "Carlitos",
+      "lastName": "Willis",
+      "email": "carlitoswillis@berkeley.edu",
+      "id": 14
     }
   ]
 }
