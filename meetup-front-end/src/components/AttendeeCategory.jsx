@@ -8,7 +8,6 @@ const AttendeeCategory = (props) => {
         {group}
       </h3>
       {attendees.map((guest) => {
-        console.log(guest);
         const { firstName, lastName, skillLevel, id } = guest;
         if (skillLevel === group.toLowerCase()) {
           return (
