@@ -23,13 +23,14 @@ class App extends React.Component {
     this.setState({
       attendees: data,
     })
+    console.log(this.state.attendees);
   }
 
 render() {
   return(
     <div className="main">
       <AttendeeForm />
-      <Attendees />
+      <Attendees attendees={this.state.attendees}/>
     </div>
   )
 }
