@@ -7,9 +7,9 @@ const Attendees = ({attendees}) => {
   const intermediate = [];
   const expert = [];
   attendees.filter(a => {
-    if (a.skillLevel === "beginner") {
+    if (a.skillLevel === 'beginner') {
       beginner.push(a);
-    } else if (a.skillLevel === "intermediate") {
+    } else if (a.skillLevel === 'intermediate') {
       intermediate.push(a);
     } else {
       expert.push(a);
@@ -17,7 +17,7 @@ const Attendees = ({attendees}) => {
   });
 
   return (
-    <div className="attendees">
+    <div className='attendees'>
       <h2>Attendees</h2>
       <h3>Beginner</h3>
       {beginner.map(b => { return ( <p>{b.firstName} {b.lastName}</p> ); })}

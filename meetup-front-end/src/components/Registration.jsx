@@ -16,19 +16,19 @@ class Registration extends React.Component {
     const { firstName, lastName, email, shirt, skillLevel } = this.state;
 
     return (
-      <form className="attendee-form" onChange={this.handleOnChange} onSubmit={e => this.handleSubmit(e)}>
+      <form className='attendee-form' onChange={this.handleOnChange} onSubmit={e => this.handleSubmit(e)}>
         <h2>Register Attendee</h2>
         <label>First Name:</label>
-        <input type="text" id="firstName" />
-        <label htmlFor="lname">Last Name:</label>
-        <input type="text" id="lastName" />
-        <label htmlFor="email">Email Address:</label>
-        <input type="text" id="email" />
-        <label htmlFor="shirt">Shirt Size:</label>
-        <input type="text" id="shirt" />
-        <label htmlFor="level">Experiance Level:</label>
-        <input type="text" id="skillLevel" />
-        <button type="submit">REGISTER</button>
+        <input type='text' id='firstName' />
+        <label>Last Name:</label>
+        <input type='text' id='lastName' />
+        <label>Email Address:</label>
+        <input type='text' id='email' />
+        <label>Shirt Size:</label>
+        <input type='text' id='shirt' />
+        <label>Experiance Level:</label>
+        <input type='text' id='skillLevel' />
+        <button type='submit'>REGISTER</button>
       </form>
     );
   }
