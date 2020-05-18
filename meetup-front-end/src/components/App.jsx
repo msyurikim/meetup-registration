@@ -14,6 +14,7 @@ class App extends React.Component {
     };
 
     this.getAttendees = this.getAttendees.bind(this);
+    this.addAttendee = this.addAttendee.bind(this);
   }
 
   getAttendees() {
@@ -28,6 +29,15 @@ class App extends React.Component {
       });
   }
 
+  addAttendee(attendee) {
+    const { attendees } = this.state;
+    attendees.push(attendee);
+
+    this.setState ({
+      attendees: attendees
+    });
+  }
+
   componentDidMount() {
     this.getAttendees();
   }
@@ -39,7 +49,7 @@ class App extends React.Component {
     return(
       <div className="main">
         <AttendeeList attendees={attendees} />
-        <AttendeeForm refresh={this.getAttendees}/>
+        <AttendeeForm add={this.addAttendee}/>
       </div>
     );
   }

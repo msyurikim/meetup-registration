@@ -57,8 +57,10 @@ class AttendeeForm extends React.Component {
     let submission = this.state;
     axios.post('/attendees', submission)
       .then((response) => {
-        console.log(response);
-        this.props.refresh();
+       if (response.status === 201) {
+         console.log('Success!');
+         this.props.add(submission);
+       }
       })
       .then(() => {
         this.setState({
