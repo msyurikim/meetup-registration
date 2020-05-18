@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
+import AttendeesForm from 'AttendeesForm.jsx';
+import AttendeesList from 'AttendeesList.jsx';
+
 class App extends React.Component {
   // YOUR CODE HERE
   constructor(props) {
@@ -29,9 +32,10 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        Hello
+        <AttendeesForm />
+        <AttendeesList />
       </div>
-    )
+    );
   }
 }
 
