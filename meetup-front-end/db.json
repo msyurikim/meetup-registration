@@ -39,6 +39,14 @@
       "email": "kaylee@serenity.com",
       "shirt": "S",
       "skillLevel": "expert"
+    },
+    {
+      "firstName": "Michael",
+      "lastName": "Griffin",
+      "email": "griffinvmichael@gmail.com",
+      "shirtSize": "M",
+      "skill": "beginner",
+      "id": 6
     }
   ]
 }

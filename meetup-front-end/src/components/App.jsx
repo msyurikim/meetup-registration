@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      attendees: [],
+      attendees: []
     }
   }
 
@@ -24,6 +24,28 @@ class App extends React.Component {
     })
   }
 
+  handleSubmit(data) {
+    const { firstName, lastName, email, shirtSize, skill } = data;
+    axios.post("/attendees", {
+        firstName,
+        lastName,
+        email,
+        shirtSize,
+        skill
+      })
+      .then(response => {
+        return response.data;
+      })
+      .then(newAttendee => {
+        this.setState({
+          attendees: [...this.state.attendees, newAttendee]
+        });
+      })
+      .catch(error => {
+        console.log("There was an error in the App.jsx handleSubmit function");
+      });
+  }
+
   render() {
     return (
         <div className="main">
@@ -31,7 +53,7 @@ class App extends React.Component {
             attendees={this.state.attendees}
             data={this.state.data}
           />
-          <RegisterAttendee />
+          <RegisterAttendee handleSubmit={this.handleSubmit} />
         </div>
     )
   }

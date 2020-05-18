@@ -23,25 +23,25 @@ const CurrentAttendees = props => {
       <h3>Beginner</h3>
       {beginner.map(beginner => {
         return (
-          <p>
+          <div>
             {beginner.firstName} {beginner.lastName}
-          </p>
+          </div>
         );
       })}
       <h3>Intermediate</h3>
       {intermediate.map(intermediate => {
         return (
-          <p>
+          <div>
             {intermediate.firstName} {intermediate.lastName}
-          </p>
+          </div>
         );
       })}
       <h3>Expert</h3>
       {expert.map(expert => {
         return (
-          <p>
+          <div>
             {expert.firstName} {expert.lastName}
-          </p>
+          </div>
         );
       })}
     </div>
