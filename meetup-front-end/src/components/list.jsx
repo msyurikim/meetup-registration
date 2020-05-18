@@ -1,15 +1,26 @@
 import React from 'react';
+import axios from 'axios';
 
 class List extends React.Component {
   constructor() {
     super();
     this.state = {
-
+      attendees: undefined || [],
     };
+    this.getAttendees = this.getAttendees.bind(this);
   }
 
   componentDidMount() {
+    this.getAttendees();
+  }
 
+  getAttendees() {
+    axios.get('/attendees')
+    .then((result) => {
+      this.setState({
+        attendees: result
+      });
+    }).then(() => console.log(this.state));
   }
 
   render() {
