@@ -6,8 +6,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
-    }
+      attendees: []
+    };
   }
 
   componentDidMount() {
@@ -16,9 +16,14 @@ class App extends React.Component {
 
   getAttendees() {
     axios.get('/attendees')
-      .then(results => {
-        console.log(results);
-      });
+      .then(({data}) => {
+        let newState = this.state;
+        newState.attendees = data;
+        this.setState(newState);
+      })
+      .catch((err) => {
+        console.error(err);
+      })
   }
 
   render () {
