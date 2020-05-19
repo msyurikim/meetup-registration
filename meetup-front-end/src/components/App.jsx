@@ -14,6 +14,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.getAttendees();
+  }
+
+  getAttendees() {
     $.get('/attendees')
       .then( res => {
         this.setState({
@@ -29,7 +33,7 @@ class App extends React.Component {
     if (this.state.attendees) {
       return (
         <div className="main">
-          <Form />
+          <Form getAttendees={this.getAttendees.bind(this)}/>
           <Attendees attendees={this.state.attendees} />
         </div>
       );

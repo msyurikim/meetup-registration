@@ -5,55 +5,58 @@ class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputs: {}
+      // inputs: {},
+      first: '',
+      last: '',
+      email: '',
+      shirt: 'XS',
+      level: 'beginner'
     }
   }
 
   inputHandler(event, key) {
-    var inputsCopy = JSON.parse(JSON.stringify(this.state.inputs));
-    inputsCopy[key] = event.target.value;
     this.setState({
-      inputs: inputsCopy
+      [key]: event.target.value
     });
   }
 
   clickHandler() {
     $.post('/attendees', {
-      firstName: this.state.inputs.first,
-      lastName: this.state.inputs.last,
-      email: this.state.inputs.email,
-      shirt: this.state.inputs.shirt,
-      skillLevel: this.state.inputs.level
-    });
-    // .done(() => get Attendees, and re-render?);
+      firstName: this.state.first,
+      lastName: this.state.last,
+      email: this.state.email,
+      shirt: this.state.shirt,
+      skillLevel: this.state.level
+    })
+    .done(() => this.props.getAttendees());
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="attendee-form">
-        {/* <!-- NOTE: This does not contain all required fields. --> */}
         <h2>Register Attendee</h2>
         <label>First Name:
-          <input type="text" onChange={() => this.inputHandler(event, 'first')}></input>
+          <input type="text" onChange={(event) => this.inputHandler(event, 'first')}></input>
         </label>
         <label>Last Name:
-          <input type="text" onChange={() => this.inputHandler(event, 'last')}></input>
+          <input type="text" onChange={(event) => this.inputHandler(event, 'last')}></input>
         </label>
         <label>Email address:
-          <input type="text" onChange={() => this.inputHandler(event, 'email')}></input>
+          <input type="text" onChange={(event) => this.inputHandler(event, 'email')}></input>
         </label>
         <label>Shirt Size:
-          <select onChange={() => this.inputHandler(event, 'shirt')}>
-            <option>XS</option>
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-            <option>XXL</option>
+          <select value={this.state.shirt} onChange={(event) => this.inputHandler(event, 'shirt')}>
+            <option value='XS'>XS</option>
+            <option value='S'>S</option>
+            <option value='M'>M</option>
+            <option value='L'>L</option>
+            <option value='XL'>XL</option>
+            <option value='XXL'>XXL</option>
           </select>
         </label>
         <label>Experience Level:
-          <select onChange={() => this.inputHandler(event, 'level')}>
+          <select value={this.state.level} onChange={(event) => this.inputHandler(event, 'level')}>
             <option>beginner</option>
             <option>intermediate</option>
             <option>expert</option>
